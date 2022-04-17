@@ -1,10 +1,18 @@
 import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <div>
-            <h2>header</h2>
-        </div>
+      <Navbar bg="primary" variant="dark">
+        <Container>
+            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Nav className="me-auto">
+                
+            </Nav>
+            
+        
+        </Container>
+      </Navbar>
     );
 };
 
