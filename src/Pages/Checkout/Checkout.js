@@ -1,45 +1,38 @@
-import { Button } from 'bootstrap';
-import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
 
+import React, { useState } from 'react';
 
 
 const Checkout = () => {
-    const [checkout, setCheckout] = useState('')
+    const [message, setMessage] = useState('')
 
 
-    const handleSubmit = e =>{
-        e.preventDefault();
-       
-        setCheckout('Thank you for your request. We will send appoinment time to your email')
- 
+
+   const handleCheckout =() =>{
+        setMessage('Thank you for your appoinment. You will get an email from us.')
+        
     }
 
-
-
     return (
-    <>
-        <div className='w-50 mx-auto mt-5 border border-1 border-info px-5 py-4 rounded-2'>
-            <h1 className='text-center mt-0 mb-0 pb-3 text-primary'>Please Login</h1>
-            <Form onSubmit={ handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control  type="email" placeholder="Enter your email" />
-                </Form.Group>
-
-                <Form.Group className="mb-4" controlId="formBasicPassword">
-                    <Form.Control  type="text" placeholder="Enter your problem here" />
-                </Form.Group>
-
-                {checkout}
-                
-                <Button className='px-5' variant="primary" type="submit">
-                    Login
-                </Button>
-               
-            </Form>
+        <div>
+            <div className='w-50 p-4 mx-auto'>
+                <h1 className='text-center'>Checkout</h1>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name"/>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Age"/>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='Write your problem here...' rows="2"></textarea>
+                </div>
+                <div className='text-primary fs-2 text-bold mb-3'>
+                    {message}
+                </div>
+                <div>
+                    <div onClick={handleCheckout} className="btn btn-primary rounded-pill px-5 py-2 "> Get Appoinment</div>
+                </div>
+            </div>
         </div>
-     </>
-
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Carousel, Container, Row } from 'react-bootstrap';
+import { Button, Carousel, Container} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import banner1 from '../../../image/banner/banner1.png'
 import banner2 from '../../../image/banner/banner2.png'

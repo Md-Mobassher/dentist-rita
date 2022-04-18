@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Login = () => {
@@ -28,6 +29,7 @@ const Login = () => {
     const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
     
 
+   
 
     const handleEmailChange = e =>{
         const emailRegex = /\S+@\S+\.\S+/;
@@ -67,10 +69,15 @@ const Login = () => {
         signInWithEmailAndPassword(userInfo.email, userInfo.password)
     }
 
-    
+  
 
     useEffect(() => {
         const error = hookError || googleError;
+        if(loading){
+            return<Loading></Loading>
+        }
+
+        
         if(error){
             switch(error?.code){
                 case "auth/invalid-email":
@@ -89,7 +96,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
         if (user) {
