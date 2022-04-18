@@ -13,7 +13,7 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header></Header>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
@@ -27,7 +27,7 @@ function App() {
               </RequireAuth>
             }></Route>
           
-          <Route path='/notfound' element={<NotFound></NotFound>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
           
 
         </Routes>
