@@ -1,3 +1,25 @@
-.banner-title{
-    font-size: 60px;
+
+@media  (min-width: 1050px ) and ( max-width: 1500px) {
+    .banner-title{
+        font-size: 60px;
+    }
+}
+
+
+@media  (min-width: 760px ) and ( max-width: 1050px) {
+    .banner-title{
+        font-size: 50px;
+    }
+}
+
+@media  (min-width: 460px ) and ( max-width: 760px) {
+    .banner-title{
+        font-size: 35px;
+    }
+}
+
+@media  (min-width: 0px ) and ( max-width: 460px) {
+    .banner-title{
+        font-size: 20px;
+    }
 }

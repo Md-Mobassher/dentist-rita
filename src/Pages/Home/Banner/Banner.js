@@ -9,21 +9,21 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div>
+        <>
         <Container>
             <Carousel className='banner'>
                 <Carousel.Item>
-                    <Row>
-                        <div className="col-6 d-flex flex-column align-items-center justify-content-center">
+                    <div className='row first-banner'>
+                        <div className="col-lg-6 col-md-5 col-sm-4 d-flex flex-column align-items-center justify-content-center">
                             <h1 className='banner-title text-center'>Welcome to the best Dental Service</h1>
-                            <Button  as={Link} to='/login' className='px-5 py-3 mt-4 rounded-pill fs-5' variant="primary" type="submit">
+                            <Button  as={Link} to='/checkout' className='px-5 py-2 mt-4 rounded-pill fs-5' variant="primary" type="submit">
                                  Appoinment
                             </Button>
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6 col-md-7 col-sm-8">
                             <img className='img-fluid' src={banner1} alt="" />
                         </div>
-                    </Row>
+                    </div>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -51,7 +51,7 @@ const Banner = () => {
             </Carousel>
         </Container>
             
-        </div>
+        </>
     );
 };
 
