@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import gallery1 from '../../../image/gallery/gallery1.png'
 import gallery2 from '../../../image/gallery/gallery2.png'
 import gallery3 from '../../../image/gallery/gallery3.png'
@@ -7,7 +9,10 @@ import gallery4 from '../../../image/gallery/gallery4.png'
 import gallery5 from '../../../image/gallery/gallery5.png'
 import gallery6 from '../../../image/gallery/gallery6.png'
 
+
+
 const Gallery = () => {
+    
     return (
         <div id='gallery' className='mt-5'>
             <h1 className='text-center mb-4'>Gallery</h1>

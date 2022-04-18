@@ -1,15 +1,11 @@
-
 import React, { useState } from 'react';
 
 
 const Checkout = () => {
     const [message, setMessage] = useState('')
 
-
-
    const handleCheckout =() =>{
-        setMessage('Thank you for your appoinment. You will get an email from us.')
-        
+        setMessage('Thank you for your appoinment. You will get an email from us.')       
     }
 
     return (

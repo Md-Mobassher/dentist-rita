@@ -73,9 +73,9 @@ const Login = () => {
 
     useEffect(() => {
         const error = hookError || googleError;
-        if(loading){
-            return<Loading></Loading>
-        }
+        // if(loading){
+        //     return<Loading></Loading>
+        // }
 
         
         if(error){
@@ -98,11 +98,11 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    useEffect(() => {
+   
         if (user) {
             navigate(from);
         }
-    }, [user]);
+    
 
 
     return (

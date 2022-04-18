@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Register = () => {
@@ -26,10 +27,10 @@ const Register = () => {
         user,
         loading,
         hookError,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
     
-
+      const navigate = useNavigate()
 
     const handleEmailChange = e =>{
         const emailRegex = /\S+@\S+\.\S+/;
@@ -78,10 +79,12 @@ const Register = () => {
         console.log(userInfo);
 
         createUserWithEmailAndPassword(userInfo.email, userInfo.password)
+        navigate('/home')
     }
 
 
     useEffect(() => {
+      
         const error = hookError || googleError;
         if(error){
             switch(error?.code){
@@ -96,19 +99,19 @@ const Register = () => {
                     toast("Something went wrong")
             }
         }
-    }, [hookError, googleError])
+    }, [ hookError, googleError])
 
      
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    // const from = location.state?.from?.pathname || "/";
 
-    useEffect(()=>{
+    
         if(user){
-            navigate(from)
+            <Navigate to='/' state={{from: location}} replace></Navigate>
         }
         
-    },[user])
+    
 
 
     return (

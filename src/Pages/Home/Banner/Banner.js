@@ -10,7 +10,7 @@ import './Banner.css'
 const Banner = () => {
     return (
         <>
-        <Container>
+        <Container id='banner'>
             <Carousel className='banner'>
                 <Carousel.Item>
                     <div className='row first-banner'>
