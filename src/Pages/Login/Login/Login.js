@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -28,7 +28,7 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
     
-
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
    
 
     const handleEmailChange = e =>{
@@ -61,6 +61,18 @@ const Login = () => {
         }     
     }
 
+   
+
+    const resetPassword = async () => {
+        const email= userInfo.email;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('please enter your email address');
+        }
+    }
 
     const handleSubmit = e =>{
         e.preventDefault();
@@ -73,10 +85,6 @@ const Login = () => {
 
     useEffect(() => {
         const error = hookError || googleError;
-        // if(loading){
-        //     return<Loading></Loading>
-        // }
-
         
         if(error){
             switch(error?.code){
@@ -123,7 +131,8 @@ const Login = () => {
                     Login
                 </Button>
                 <ToastContainer />
-                <p className='mt-3'>Don't have an account <Link to='/register'>Create an account</Link></p>
+                <p className='mt-3'>Don't have an account? <Link to='/register'>Create an account</Link></p>
+                <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             </Form>
 
             <div className='d-flex align-items-center'>

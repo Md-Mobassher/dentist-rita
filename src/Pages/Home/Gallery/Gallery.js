@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
 import gallery1 from '../../../image/gallery/gallery1.png'
 import gallery2 from '../../../image/gallery/gallery2.png'
 import gallery3 from '../../../image/gallery/gallery3.png'
