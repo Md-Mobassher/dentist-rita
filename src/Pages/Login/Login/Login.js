@@ -132,7 +132,7 @@ const Login = () => {
                 </Button>
                 <ToastContainer />
                 <p className='mt-3'>Don't have an account? <Link to='/register'>Create an account</Link></p>
-                <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+                <p className='mt-0'>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             </Form>
 
             <div className='d-flex align-items-center'>
