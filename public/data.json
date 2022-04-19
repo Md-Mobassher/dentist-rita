@@ -3,42 +3,42 @@
         "id": 1,
         "name": "ORTHODONTIC",
         "price": "1500",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "If the jaws and teeth do not develop properly, malocclusion can result. The teeth will be crooked and misaligned, and the bottom and top sets of teeth may not line up. ",
         "img": "https://i.ibb.co/x5TK4Mh/service1.png"
     },
     {
         "id": 2,
         "name": "WHITENING",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Find the lowest price for Dentist Los Angeles today! Now on sale at GigaPromo. GigaPromo is the website to compare Dentist Los Angeles. Search and save now! Always Sale.",
         "img": "https://i.ibb.co/bRgnb1G/service3.png"
     },
     {
         "id": 3,
         "name": "IMPLANTS",
         "price": "2000",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Technically, a dental implant is an artificial tooth root that’s placed into your jaw to hold a prosthetic tooth or bridge. However, when most people use the term “dental implants.",
         "img": "https://i.ibb.co/TmwRGqz/service2.png"
     },
     {
         "id": 4,
         "name": "ORAL SERGERY",
         "price": "1000",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Oral and maxillofacial surgery, dental specialty that deals with the diagnosis and surgical treatment of the diseases, injuries, and defects of the human mouth.Come to my chember.",
         "img": "https://i.ibb.co/zFP7hgy/service4.png"
     },
     {
         "id": 5,
         "name": "ROOT CANALS",
         "price": "900",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Root canal is a treatment to repair and save a badly damaged or infected tooth instead of removing it. The term root canal comes from cleaning of the canals inside a tooth's root.",
         "img": "https://i.ibb.co/BNnBnLF/service5.png"
     },
     {
         "id": 6,
         "name": "CHECKUP",
         "price": "1000",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "description": "Two dental visits a year are recommended for most patients. In a typical check-up, patients are seen by both a hygienist and a dentist. The hygienist cleans and polishes your teeth.",
         "img": "https://i.ibb.co/6wLs4Rz/service6.jpg"
     }
 ]
