@@ -2,7 +2,7 @@
 
 ## Live side Link: https://dentist-rita.firebaseapp.com
 
-## Description:
+## Project Details:
 - This is a dentist website
 - Here Home, about, blog, login and registration page 
 - Home page contain a banner, services and a extra section gallery
